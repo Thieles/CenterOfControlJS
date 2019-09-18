@@ -1,0 +1,203 @@
+<template class="tsk-element">
+    <section class="sec secjs" id="pessoa-functions">
+        <ul class="nav nav-tabs fix-tab-top-nav" id="cadastro">
+          <li class="nav-item" style="padding-bottom: 7px;">
+            <a class="nav-link fix-tab-nav active" data-toggle="tab" href="#pessoa-fisica" role="tab"
+              aria-controls="pessoa-fisica" aria-selected="true">Pessoa Fisíca</a>
+            <button type="button" class="btn close" aria-label="Close" style="float: left;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+          <li class="nav-item" style="padding-bottom: 7px;">
+            <a class="nav-link fix-tab-nav" data-toggle="tab" href="#endereco" role="tab" aria-controls="endereco"
+              aria-selected="true">Endereço</a>
+            <button type="button" class="btn close" aria-label="Close" style="float: left;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="nvtab-content">
+          <div class="tab-pane fade show active" id="pessoa-fisica" role="tabpanel" aria-labelledby="pessoa-fisica-tab">
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <img src="src/assets/icons/512.png" alt="" class="img-thumbnail"
+                  style="border-radius: 50%; height: 150px; border: none;">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="nome" class="hidden-label">Nome Completo</label>
+                <input type="text" class="form-control control" placeholder="Nome Completo" name="nome" id="nome" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="cpf" class="hidden-label">CPF</label>
+                <input type="text" class="form-control control" placeholder="CPF" name="cpf" id="cpf" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="doc-rg" class="hidden-label">Dcoumento de Identidade</label>
+                <input type="text" class="form-control control" placeholder="Dcoumento de Identidade" name="doc-rg"
+                  id="doc-rg" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="emissor-rg" class="hidden-label">Emissor RG</label>
+                <input type="text" class="form-control control" placeholder="Emissor" name="emissor-rg" id="emissor-rg" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="dt-nascimento" class="hidden-label">Data Nascimento</label>
+                <input type="date" class="form-control control" placeholder="Data Nascimento" name="dt-nascimento"
+                  id="dt-nascimento" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="celular">Celular</label>
+                <input type="tel" class="form-control control" placeholder="" name="celular" id="celular"
+                  style=" width: 87%;align-self:baseline;left: 0px;display: inline-flex;" />
+                <button class="btn btn-outline-info" id="evt-add-phone" type="button"
+                  style="position: relative;float: right;top: 10px;">
+                  <i class="fas fa-plus-circle"></i>
+                </button>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control control" placeholder="example@example.com.br" name="email"
+                  id="email" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="uf">UF</label>
+                <select class="form-control control" placeholder="UF" name="uf" id="uf">
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="local-nascimento">Local Nascimento</label>
+                <input type="text" class="form-control control" placeholder="Local Nascimento" name="local-nascimento"
+                  id="local-nascimento" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="nascionalidade">Nascionalidade</label>
+                <input type="text" class="form-control control" placeholder="Nascionalidade" name="nascionalidade"
+                  id="nascionalidade" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="sexo">Sexo</label>
+                <div id="sexo-icon">
+                  <input type="checkbox" class="control" name="sexo" id="sexo" />
+                  <i class="fas fa-3x fa-toggle-on" style="background-color: blue"></i>
+                  <i class="fas fa-3x fa-toggle-off" style="background-color: pink"></i>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="window-content" id="add-phone">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th cope="col">Número</th>
+                      <th cope="col"><i class="fas fa-phone"></i>Ramal</th>
+                      <th cope="col"><i class="fas fa-whatsapp"></i>Whatsapp</th>
+                      <th cope="col"><i class="fas fa-telegram"></i>Telegram</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="text" class="form-control control" name="numero-fone" id="numero1">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-ramal" id="ramal1">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-whatsapp" id="whatsapp1">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-Telegram" id="telegram1">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="form-control control" name="numero-fone" id="numero2">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-ramal" id="ramal2">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-whatsapp" id="whatsapp2">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-Telegram" id="telegram2">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type="text" class="form-control control" name="numero-fone" id="numero3">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-ramal" id="ramal3">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-whatsapp" id="whatsapp3">
+                      </td>
+                      <td>
+                        <input type="checkbox" name="chk-Telegram" id="telegram3">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="endereco" role="tabpanel" aria-labelledby="endereco-tab">
+            <div class="form-row">
+              <div class="col-6">
+                <label for="logradouro">logradouro</label>
+                <input type="text" name="logradouro" placeholder="logradouro" id="logradouro" class="form-control control"
+                  style="width: 90%;align-self:baseline;left: 0px;display: inline-flex;" />
+                <button class="btn btn-outline-primary" id="btn-logradouro" type="button"
+                  style="position: relative;float: right;top: 10px;right: 10px;">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="bairro">Bairro</label>
+                <input type="text" class="form-control control" placeholder="Bairro" name="bairro" id="bairro" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="numero">Número</label>
+                <input type="text" class="form-control control" placeholder="Número" name="numero" id="numero" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control control" placeholder="CEP" name="cep" id="cep" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-3">
+                <label for="cidade">Cidade</label>
+                <input type="text" class="form-control control" placeholder="Cidade" name="cidade" id="cidade" />
+              </div>
+              <div class="form-group col-md-3">
+                <label for="uf-end">UF</label>
+                <select class="form-control control" placeholder="UF" name="uf-end" id="uf-end">
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="ibge">IBGE</label>
+                <input type="text" class="form-control control" placeholder="IBGE" name="ibge" id="ibge" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="comentario" class="line-dm">Comentário</label>
+                <textarea class="form-control control" form-rows="10" cols="100" name="comentario" id="comentario"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</template>

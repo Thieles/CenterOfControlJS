@@ -1,0 +1,137 @@
+<template class="tsk-element">
+  <section class="sec secjs" id="fornecedor-functions">
+    <ul class="nav nav-tabs fix-tab-top-nav" id="">
+      <li class="nav-item" style="padding-bottom: 7px;">
+        <a class="nav-link fix-tab-nav active" data-toggle="tab" href="#fornecedor" role="tab"
+          aria-controls="fornecedor" aria-selected="true">Pessoa Jurídica</a>
+        <button type="button" class="btn close" aria-label="Close" style="float: left;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      <li class="nav-item" style="padding-bottom: 7px;">
+        <a class="nav-link fix-tab-nav" data-toggle="tab" href="#endereco" role="tab" aria-controls="endereco"
+          aria-selected="true">Endereço</a>
+        <button type="button" class="btn close" aria-label="Close" style="float: left;">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="nvtab-content">
+      <div class="tab-pane fade show active" id="fornecedor" role="tabpanel" aria-labelledby="fornecedor-tab">
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="razao-social" class="hidden-label">Razão Social</label>
+            <input type="text" name="razao-social" id="razao-social" class="form-control control"
+              placeholder="Razão Social/ Nome">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="fantasia" class="hidden-label">Nome Fantasia</label>
+            <input type="text" name="fantasia" id="fantasia" class="form-control control"
+              placeholder="Nome Fantasia / Apelido">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="cnpj" class="hidden-label">CNPJ</label>
+            <input type="text" name="cnpj" id="cnpj" class="form-control control" placeholder="CNPJ">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="ins-municipal" class="hidden-label">Inscrição Municípal</label>
+            <input type="text" name="ins-municipal" id="ins-municipal" class="form-control control"
+              placeholder="Inscrição Municípal">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="ins-estadual" class="hidden-label">Inscrição Estadual</label>
+            <input type="text" name="ins-estadual" id="ins-estadual" class="form-control control"
+              placeholder="Inscrição Estadual">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="status" class="hidden-label">Status</label>
+            <div style="padding-top: 10px;">
+              <div class="form-check form-check-inline">
+                <input type="radio" name="status" id="status-ativo" class="form-check-input" value="ativo">
+                <label for="status-ativo" class="form-check-label">Ativo</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" name="status" id="status-bloqueado" class="form-check-input" value="bloqueado">
+                <label for="status-bloqueado" class="form-check-label">Bloqueado</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="telefone" class="hidden-label">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" class="form-control control"
+              placeholder="(__) _ ____ - ____">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="fax" class="hidden-label">FAX</label>
+            <input type="tel" name="fax" id="fax" class="form-control control" placeholder="(__) _ ____ - ____">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="celular" class="hidden-label">Celular</label>
+            <input type="tel" name="celular" id="celular" class="form-control control" placeholder="(__) _ ____ - ____">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="comentario" class="line-dm">Comentário</label>
+            <textarea class="form-control control" form-rows="10" cols="100" name="comentario"
+              id="comentario"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="endereco" role="tabpanel" aria-labelledby="endereco-tab">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="logradouro">logradouro</label>
+            <input type="text" name="logradouro" placeholder="logradouro" id="logradouro" class="form-control control"
+              style="width: 90%;align-self:baseline;left: 0px;display: inline-flex;" />
+            <button class="btn btn-outline-primary" id="btn-logradouro" type="button"
+              style="position: relative;float: right;top: 10px;right: 10px;">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control control" placeholder="Bairro" name="bairro" id="bairro" />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="numero">Número</label>
+            <input type="text" class="form-control control" placeholder="Número" name="numero" id="numero" />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="cep">CEP</label>
+            <input type="text" class="form-control control" placeholder="CEP" name="cep" id="cep" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control control" placeholder="Cidade" name="cidade" id="cidade" />
+          </div>
+          <div class="form-group col-md-3">
+            <label for="uf-end">UF</label>
+            <select class="form-control control" placeholder="UF" name="uf-end" id="uf-end">
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="ibge">IBGE</label>
+            <input type="text" class="form-control control" placeholder="IBGE" name="ibge" id="ibge" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <label for="comentario" class="line-dm">Comentário</label>
+            <textarea class="form-control control" form-rows="10" cols="100" name="comentario"
+              id="comentario"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

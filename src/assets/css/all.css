@@ -1,0 +1,176 @@
+#barra-lateral {
+  width: 50px;
+  height: 680px;
+  position: fixed;
+  float: left;
+  margin-top: 56px;
+  margin-right: 15px;
+  border-right: outset;
+  z-index: 1130;
+}
+
+.divisao {
+  padding: 0.24rem
+}
+
+#menu-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.space-left { 
+  display: block;
+  overflow: hidden;
+  margin-left: 15%;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 0;
+  padding: 0 0 0 50px;
+  box-sizing: border-box;
+  font-size: 15px
+}
+
+.space {
+  margin-left: 9%
+}
+
+.btn {
+  display: inline-block;
+  padding: 3px 8px;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: default;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06);
+  -webkit-app-region: no-drag;
+}
+
+.btn-default {
+  color: #333;
+  border-top-color: #c2c0c2;
+  border-right-color: #c2c0c2;
+  border-bottom-color: #a19fa1;
+  border-left-color: #c2c0c2;
+  background-color: #fcfcfc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, #f1f1f1));
+  background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f1f1f1 100%);
+  background-image: linear-gradient(to bottom, #fcfcfc 0%, #f1f1f1 100%);
+}
+.btn-default:active {
+  background-color: #ddd;
+  background-image: none;
+}
+
+.input-field input:focus,
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field input[type=email],
+.input-field input[type=url],
+.input-field input[type=date] { 
+  border:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+
+.window {
+  position: absolute;
+  top: 56px;
+  right: 0;
+  bottom: 44px;
+  left: 59px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.window-content {
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex: 1;
+}
+
+.window-content-js {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.control {
+  border-style: hidden;
+  border-bottom-style: inset;
+  height: none;
+  padding: none;
+}
+
+.active-dm.show-dm {
+  visibility: visible;
+  opacity: 1;
+  transform: translateZ(0);
+  transition: visibility 0s .12s linear, opacity .36s ease-out, transform .36s ease-out;
+}
+
+.no-show-dm {
+ visibility: hidden;
+ opacity: 0;
+ transform: translateZ(-20px);
+ transition: visibility 0s .12s ease, opacity .36s ease-in, transform .36s ease-in;
+}
+
+.sec {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: visibility 0s .12s linear, opacity .12s ease-in, transform .12s ease-in;
+}
+
+.sec.show-view {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition: visibility 0s .12s linear, opacity .36s ease-out, transform .36s ease-out;
+  width: 100%;
+}
+
+.sec-wrapper {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.fix-tab-nav {
+  align-self:baseline;
+  left: 0px;
+  display: inline;
+}
+
+.fix-tab-top-nav {
+  margin-top: 7px;
+}
+.fix-top-footer {
+  margin-top: 14px;
+}
+
+.fix-footer-align {
+  display: inline-flex;
+  line-height: .2em;
+  align-items: baseline;
+}
+
+#nvtab-content {
+  padding: 0.75em;
+  height: auto;
+  width: 100%;
+}
