@@ -1,21 +1,21 @@
-require 'soap/rpc/standaloneServer'
+# require 'jrubyfx'
+# require File.join(File.dirname(__FILE__), './swing', 'login')
+# require '../depedencias/fontawesomefx-8.9.jar'
+# require '../depedencias/jfoenix-8.0.4.jar'
+# Login.launch
 
-class HelloWorldServer < SOAP::RPC::StandaloneServer
-  def on_init
-    @log.level = Logger::Severity::DEBUG
-    add_method self, 'hello_world', 'from'
-  end
+require_relative 'business/pessoa_fisica_bll'
+require_relative 'classe/pessoa_fisica'
+require 'json'
+pfm = PessoaFisicaBLL.new
+rs = pfm.on_get_by_nome "Lopes Possa"
+puts rs
+v = pfm.on_exists 1
+puts v
 
-  def hello_world(from)
-    "Olá mundo!, de #{from}"
-  end
-end
+p '---------------- list'
+pfl = pfm.on_get_list
+puts pfl
 
-
-if $0 == __FILE__
-  server = HelloWorldServer.new 'Hello', 'urn:Hello', '0.0.0.0', 2000
-  trap(:INT) do
-    server.shutdown
-  end
-  server.start
-end
+p '------------------- on read'
+puts pfm.on_read 1

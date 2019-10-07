@@ -351,3 +351,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+#ignorar package-lock
+package-lock.json
+vs.code-workspace
+/src/ruby/server
+/src/ruby/swing
