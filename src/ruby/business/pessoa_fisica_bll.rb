@@ -3,15 +3,6 @@ begin
   require_relative '../features/features'
   require_relative File.join(File.dirname(__FILE__), '../database/pessoa_fisica_dal')
   require_relative File.join(File.dirname(__FILE__), '../classe/pessoa_fisica')
-  # senha root => 'C2h@4e3.z9_dev!DB'
-=begin
-  def initialize
-    @pf_dal = PessoaFisicaDAL.new hostserver: 'localhost',
-                                  user: 'centerofcontrol',
-                                  password: 'C2h@4e3.z9_App?'
-    on_init
-  end
-=end
 end
 
 #
