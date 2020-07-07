@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Thieles/CenterOfControlJS#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "electron": "^6.0.9",
+    "electron": "^9.1.0",
     "electron-settings": "^3.2.0",
     "glob": "^7.1.0",
     "jquery": "^3.4.1",
